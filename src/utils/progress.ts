@@ -80,7 +80,9 @@ export function getPathCompletionPercentage(
   const pathProgress = getPathProgress(path, progress);
 
   return Math.round(
-    (pathProgress.completedChapterIds.length / path.chapters.length) * 100
+    (pathProgress.completedChapterIds.length /
+      path.chapters.length) *
+      100
   );
 }
 
@@ -90,7 +92,9 @@ export function isChapterCompleted(
   progress: ProgressData = getProgress()
 ): boolean {
   return (
-    progress.paths[pathId]?.completedChapterIds.includes(chapterId) ?? false
+    progress.paths[pathId]?.completedChapterIds.includes(
+      chapterId
+    ) ?? false
   );
 }
 
@@ -105,7 +109,11 @@ export function isChapterUnlocked(
 
   const previousChapter = path.chapters[chapterIndex - 1];
 
-  return isChapterCompleted(path.id, previousChapter.id, progress);
+  return isChapterCompleted(
+    path.id,
+    previousChapter.id,
+    progress
+  );
 }
 
 export function completeChapter(
@@ -114,9 +122,16 @@ export function completeChapter(
   earnedXp: number
 ): ProgressData {
   const currentProgress = getProgress();
-  const currentPathProgress = getPathProgress(path, currentProgress);
+  const currentPathProgress = getPathProgress(
+    path,
+    currentProgress
+  );
 
-  if (currentPathProgress.completedChapterIds.includes(chapterId)) {
+  if (
+    currentPathProgress.completedChapterIds.includes(
+      chapterId
+    )
+  ) {
     return currentProgress;
   }
 
