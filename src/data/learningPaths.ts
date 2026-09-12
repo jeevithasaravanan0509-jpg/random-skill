@@ -56,154 +56,922 @@ export const learningPaths: LearningPath[] = [
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Hiragana is one of the main writing systems used in Japanese. It is essential for beginners because it appears in basic words, grammar and sentence endings.",
+            "Hiragana is one of the main Japanese writing systems and is essential for beginners.",
           points: [
             {
               title: "Hiragana",
-              explanation:
-                "Hiragana represents Japanese sounds and is commonly used for grammatical elements and native Japanese words.",
+              explanation: "Represents Japanese sounds and is widely used for native words and grammar.",
             },
             {
-              title: "Five basic vowel sounds",
-              explanation:
-                "Japanese has five basic vowel sounds: a, i, u, e and o.",
+              title: "Five vowels",
+              explanation: "Japanese has five basic vowel sounds: a, i, u, e and o.",
             },
             {
               title: "Pronunciation",
-              explanation:
-                "Japanese pronunciation is generally regular, so learning the sound of each kana helps you read unfamiliar words.",
+              explanation: "Kana sounds are generally regular, making them useful for reading new words.",
             },
           ],
           example: "あ = a, い = i, う = u, え = e, お = o",
         },
         practice: [
           {
-            question: "Which Japanese script is commonly learned first by beginners?",
-            options: ["Hiragana", "Roman alphabet", "Arabic", "Hangul"],
+            question: "Which Japanese script is commonly learned first?",
+            options: ["Hiragana", "Kanji", "Arabic", "Hangul"],
             correctAnswer: "Hiragana",
             explanation:
-              "Hiragana is one of the first Japanese scripts beginners normally learn.",
+              "Hiragana is one of the first scripts beginners normally learn.",
           },
         ],
       },
-
       {
         id: "jp-02",
         order: 2,
-        title: "Basic Greetings",
-        description: "Learn useful greetings for everyday situations.",
+        title: "Hiragana Vowels",
+        description: "Master the five basic hiragana vowels and their sounds.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Japanese greetings change depending on the time of day and situation.",
+            "The five basic vowel sounds form the foundation for reading hiragana rows.",
           points: [
             {
-              title: "Ohayou gozaimasu",
-              explanation: "A polite way to say good morning.",
+              title: "あ (a)",
+              explanation: "Read as a.",
             },
             {
-              title: "Konnichiwa",
-              explanation: "A common daytime greeting.",
+              title: "い (i)",
+              explanation: "Read as i.",
             },
             {
-              title: "Konbanwa",
-              explanation: "A common evening greeting.",
+              title: "う (u)",
+              explanation: "Read as u.",
             },
             {
-              title: "Arigatou gozaimasu",
-              explanation: "A polite way to say thank you.",
+              title: "え (e)",
+              explanation: "Read as e.",
             },
           ],
+          example: "お (o) is read o.",
         },
         practice: [
           {
-            question: "What does 'Arigatou gozaimasu' mean?",
-            options: ["Good morning", "Thank you", "Good night", "Sorry"],
-            correctAnswer: "Thank you",
+            question: "Which hiragana represents the sound \"e\"?",
+            options: ["あ", "い", "え", "お"],
+            correctAnswer: "え",
             explanation:
-              "Arigatou gozaimasu is a polite expression meaning thank you.",
+              "え represents the basic e sound.",
           },
         ],
       },
-
       {
         id: "jp-03",
         order: 3,
-        title: "Introducing Yourself",
-        description: "Learn how to give a simple self-introduction.",
+        title: "K-Row Hiragana",
+        description: "Learn the か・き・く・け・こ row.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Self-introduction is one of the most useful beginner Japanese conversations.",
+            "The K-row adds k sounds to the five vowel patterns.",
           points: [
             {
-              title: "Watashi wa...",
-              explanation:
-                "Watashi wa is commonly used to introduce yourself or state something about yourself.",
+              title: "か",
+              explanation: "ka",
+            },
+            {
+              title: "き",
+              explanation: "ki",
+            },
+            {
+              title: "く",
+              explanation: "ku",
+            },
+            {
+              title: "け・こ",
+              explanation: "ke and ko",
+            },
+          ],
+          example: "か・き・く・け・こ = ka, ki, ku, ke, ko",
+        },
+        practice: [
+          {
+            question: "Which kana is read \"ki\"?",
+            options: ["か", "き", "く", "こ"],
+            correctAnswer: "き",
+            explanation:
+              "き is read ki.",
+          },
+        ],
+      },
+      {
+        id: "jp-04",
+        order: 4,
+        title: "S-Row Hiragana",
+        description: "Learn the さ・し・す・せ・そ row.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The S-row has mostly s sounds, with し pronounced shi.",
+          points: [
+            {
+              title: "さ",
+              explanation: "sa",
+            },
+            {
+              title: "し",
+              explanation: "shi",
+            },
+            {
+              title: "す",
+              explanation: "su",
+            },
+            {
+              title: "せ・そ",
+              explanation: "se and so",
+            },
+          ],
+          example: "さ・し・す・せ・そ = sa, shi, su, se, so",
+        },
+        practice: [
+          {
+            question: "Which kana is read \"shi\"?",
+            options: ["さ", "し", "す", "せ"],
+            correctAnswer: "し",
+            explanation:
+              "し is read shi.",
+          },
+        ],
+      },
+      {
+        id: "jp-05",
+        order: 5,
+        title: "T-Row Hiragana",
+        description: "Learn the た・ち・つ・て・と row.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The T-row includes the important chi and tsu sounds.",
+          points: [
+            {
+              title: "た",
+              explanation: "ta",
+            },
+            {
+              title: "ち",
+              explanation: "chi",
+            },
+            {
+              title: "つ",
+              explanation: "tsu",
+            },
+            {
+              title: "て・と",
+              explanation: "te and to",
+            },
+          ],
+          example: "た・ち・つ・て・と = ta, chi, tsu, te, to",
+        },
+        practice: [
+          {
+            question: "Which kana is read \"tsu\"?",
+            options: ["た", "ち", "つ", "て"],
+            correctAnswer: "つ",
+            explanation:
+              "つ is read tsu.",
+          },
+        ],
+      },
+      {
+        id: "jp-06",
+        order: 6,
+        title: "N-Row Hiragana",
+        description: "Learn the な・に・ぬ・ね・の row.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The N-row follows a regular beginner-friendly pattern.",
+          points: [
+            {
+              title: "な",
+              explanation: "na",
+            },
+            {
+              title: "に",
+              explanation: "ni",
+            },
+            {
+              title: "ぬ",
+              explanation: "nu",
+            },
+            {
+              title: "ね・の",
+              explanation: "ne and no",
+            },
+          ],
+          example: "な・に・ぬ・ね・の = na, ni, nu, ne, no",
+        },
+        practice: [
+          {
+            question: "Which kana is read \"ne\"?",
+            options: ["な", "に", "ね", "の"],
+            correctAnswer: "ね",
+            explanation:
+              "ね is read ne.",
+          },
+        ],
+      },
+      {
+        id: "jp-07",
+        order: 7,
+        title: "H-Row Hiragana",
+        description: "Learn the は・ひ・ふ・へ・ほ row.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The H-row mostly uses h sounds, while ふ is commonly romanized fu.",
+          points: [
+            {
+              title: "は",
+              explanation: "ha",
+            },
+            {
+              title: "ひ",
+              explanation: "hi",
+            },
+            {
+              title: "ふ",
+              explanation: "fu",
+            },
+            {
+              title: "へ・ほ",
+              explanation: "he and ho",
+            },
+          ],
+          example: "は・ひ・ふ・へ・ほ = ha, hi, fu, he, ho",
+        },
+        practice: [
+          {
+            question: "Which kana is commonly read \"fu\"?",
+            options: ["は", "ひ", "ふ", "ほ"],
+            correctAnswer: "ふ",
+            explanation:
+              "ふ is commonly romanized fu.",
+          },
+        ],
+      },
+      {
+        id: "jp-08",
+        order: 8,
+        title: "M-Row Hiragana",
+        description: "Learn the ま・み・む・め・も row.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The M-row follows the ma-mi-mu-me-mo pattern.",
+          points: [
+            {
+              title: "ま",
+              explanation: "ma",
+            },
+            {
+              title: "み",
+              explanation: "mi",
+            },
+            {
+              title: "む",
+              explanation: "mu",
+            },
+            {
+              title: "め・も",
+              explanation: "me and mo",
+            },
+          ],
+          example: "ま・み・む・め・も = ma, mi, mu, me, mo",
+        },
+        practice: [
+          {
+            question: "Which kana is read \"mu\"?",
+            options: ["ま", "み", "む", "も"],
+            correctAnswer: "む",
+            explanation:
+              "む is read mu.",
+          },
+        ],
+      },
+      {
+        id: "jp-09",
+        order: 9,
+        title: "Y/R/W Hiragana",
+        description: "Learn the remaining basic Y, R and W sounds plus ん.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "These final basic kana include fewer characters and some sounds that need extra attention.",
+          points: [
+            {
+              title: "や・ゆ・よ",
+              explanation: "ya, yu and yo",
+            },
+            {
+              title: "ら・り・る・れ・ろ",
+              explanation: "ra, ri, ru, re and ro",
+            },
+            {
+              title: "わ・を",
+              explanation: "wa and o when を is a particle",
+            },
+            {
+              title: "ん",
+              explanation: "The standalone n sound.",
+            },
+          ],
+          example: "ん = n",
+        },
+        practice: [
+          {
+            question: "Which kana represents the standalone n sound?",
+            options: ["や", "ら", "を", "ん"],
+            correctAnswer: "ん",
+            explanation:
+              "ん represents the standalone n sound.",
+          },
+        ],
+      },
+      {
+        id: "jp-10",
+        order: 10,
+        title: "Dakuten & Handakuten",
+        description: "Learn how marks change hiragana sounds.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Dakuten and handakuten add marks to certain kana to create new sounds.",
+          points: [
+            {
+              title: "Dakuten",
+              explanation: "Two marks can voice sounds such as か → が.",
+            },
+            {
+              title: "Handakuten",
+              explanation: "A small circle changes H-row sounds into P sounds.",
+            },
+            {
+              title: "Examples",
+              explanation: "さ → ざ and は → ぱ show sound changes.",
+            },
+          ],
+          example: "が = ga, ぱ = pa",
+        },
+        practice: [
+          {
+            question: "Which kana represents \"ga\"?",
+            options: ["か", "が", "さ", "ぱ"],
+            correctAnswer: "が",
+            explanation:
+              "が is read ga.",
+          },
+        ],
+      },
+      {
+        id: "jp-11",
+        order: 11,
+        title: "Small ゃ・ゅ・ょ & っ",
+        description: "Learn combination sounds and the small tsu.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Small kana create contracted sounds, while small っ changes the rhythm of pronunciation.",
+          points: [
+            {
+              title: "ゃ・ゅ・ょ",
+              explanation: "Combine with certain kana to form sounds like kya, kyu and kyo.",
+            },
+            {
+              title: "Small っ",
+              explanation: "Indicates a short consonant pause or doubled consonant.",
+            },
+            {
+              title: "Combination",
+              explanation: "きゃ is read kya.",
+            },
+          ],
+          example: "きゃ = kya",
+        },
+        practice: [
+          {
+            question: "How is きゃ commonly read?",
+            options: ["ka", "kya", "kiya", "kyo"],
+            correctAnswer: "kya",
+            explanation:
+              "きゃ forms the contracted sound kya.",
+          },
+        ],
+      },
+      {
+        id: "jp-12",
+        order: 12,
+        title: "Hiragana Reading Practice",
+        description: "Use the hiragana you learned to read simple words.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Reading short words turns kana recognition into actual reading ability.",
+          points: [
+            {
+              title: "Blend sounds",
+              explanation: "Read kana together rather than separately.",
+            },
+            {
+              title: "Simple words",
+              explanation: "すし and ねこ are useful beginner words.",
+            },
+            {
+              title: "Accuracy",
+              explanation: "Focus on correct recognition before speed.",
+            },
+          ],
+          example: "ねこ = neko = cat",
+        },
+        practice: [
+          {
+            question: "What does ねこ mean?",
+            options: ["Cat", "Dog", "Book", "Water"],
+            correctAnswer: "Cat",
+            explanation:
+              "ねこ (neko) means cat.",
+          },
+        ],
+      },
+      {
+        id: "jp-13",
+        order: 13,
+        title: "Basic Greetings",
+        description: "Learn common polite greetings for different situations.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Japanese greetings depend on time of day and situation.",
+          points: [
+            {
+              title: "Ohayou gozaimasu",
+              explanation: "Polite good morning.",
+            },
+            {
+              title: "Konnichiwa",
+              explanation: "Common daytime greeting.",
+            },
+            {
+              title: "Konbanwa",
+              explanation: "Common evening greeting.",
+            },
+            {
+              title: "Arigatou gozaimasu",
+              explanation: "Polite thank you.",
+            },
+          ],
+          example: "Konnichiwa = hello / good afternoon",
+        },
+        practice: [
+          {
+            question: "Which expression means thank you?",
+            options: ["Ohayou gozaimasu", "Arigatou gozaimasu", "Konbanwa", "Sumimasen"],
+            correctAnswer: "Arigatou gozaimasu",
+            explanation:
+              "It is a polite expression meaning thank you.",
+          },
+        ],
+      },
+      {
+        id: "jp-14",
+        order: 14,
+        title: "Everyday Expressions",
+        description: "Learn useful phrases for simple daily interactions.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A beginner needs practical expressions that can be used immediately.",
+          points: [
+            {
+              title: "Sumimasen",
+              explanation: "Excuse me / sorry in common situations.",
+            },
+            {
+              title: "Wakarimasen",
+              explanation: "I do not understand.",
+            },
+            {
+              title: "Daijoubu",
+              explanation: "Okay / all right.",
+            },
+            {
+              title: "Dou itashimashite",
+              explanation: "A polite response to thank you.",
+            },
+          ],
+          example: "Wakarimasen = I do not understand",
+        },
+        practice: [
+          {
+            question: "What does wakarimasen mean?",
+            options: ["I understand", "I do not understand", "Thank you", "Good morning"],
+            correctAnswer: "I do not understand",
+            explanation:
+              "Wakarimasen means I do not understand.",
+          },
+        ],
+      },
+      {
+        id: "jp-15",
+        order: 15,
+        title: "Self-Introduction",
+        description: "Build a simple Japanese self-introduction.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Self-introduction is one of the most useful beginner conversations.",
+          points: [
+            {
+              title: "Watashi wa",
+              explanation: "Used to introduce yourself or state something about yourself.",
             },
             {
               title: "Name",
-              explanation:
-                "You can introduce your name using 'Watashi wa [name] desu.'",
+              explanation: "Watashi wa [name] desu is a basic pattern.",
             },
             {
               title: "Desu",
-              explanation:
-                "Desu is commonly used at the end of polite beginner sentences.",
+              explanation: "Common polite ending for beginner noun sentences.",
+            },
+            {
+              title: "Yoroshiku onegaishimasu",
+              explanation: "Often used at the end of a self-introduction.",
             },
           ],
           example: "Watashi wa Jeevitha desu.",
         },
         practice: [
           {
-            question: "What does 'Watashi wa ... desu' commonly express?",
-            options: [
-              "I am ...",
-              "Where is ...?",
-              "Please sit",
-              "Good night",
-            ],
-            correctAnswer: "I am ...",
+            question: "Which pattern means \"I am ...\"?",
+            options: ["Watashi wa ... desu", "Watashi o ... desu", "Watashi ni ...", "Watashi de ..."],
+            correctAnswer: "Watashi wa ... desu",
             explanation:
-              "Watashi wa ... desu is a basic pattern for introducing or describing yourself.",
+              "It is a basic pattern for introducing yourself.",
           },
         ],
       },
-
       {
-        id: "jp-04",
-        order: 4,
-        title: "Numbers and Time",
-        description: "Learn basic numbers and simple time expressions.",
+        id: "jp-16",
+        order: 16,
+        title: "Numbers",
+        description: "Learn basic Japanese numbers from one to ten.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Numbers are used constantly in Japanese for time, dates, prices and everyday conversations.",
+            "Numbers are used in prices, ages, quantities and everyday situations.",
           points: [
             {
-              title: "Basic numbers",
-              explanation:
-                "Start by learning the numbers from one to ten.",
+              title: "1–5",
+              explanation: "ichi, ni, san, yon/shi, go.",
             },
             {
-              title: "Counting",
-              explanation:
-                "Japanese has different counters depending on what is being counted, but beginners can start with basic numbers.",
+              title: "6–10",
+              explanation: "roku, nana/shichi, hachi, kyuu, juu.",
             },
             {
-              title: "Time",
-              explanation:
-                "Time is commonly expressed using numbers followed by ji for hours.",
+              title: "Practice",
+              explanation: "Learn both sound and written form.",
             },
           ],
-          example: "San-ji = 3 o'clock",
+          example: "san = 3",
         },
         practice: [
           {
-            question: "What does 'san' mean in basic Japanese numbers?",
+            question: "What does san mean?",
             options: ["One", "Two", "Three", "Five"],
             correctAnswer: "Three",
-            explanation: "San is the Japanese number three.",
+            explanation:
+              "San is the Japanese number three.",
+          },
+        ],
+      },
+      {
+        id: "jp-17",
+        order: 17,
+        title: "Days & Dates",
+        description: "Learn basic words for days, dates and calendar talk.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Japanese calendar expressions combine numbers with words for days and months.",
+          points: [
+            {
+              title: "Weekdays",
+              explanation: "Getsuyoubi, kayoubi and other weekday names.",
+            },
+            {
+              title: "Dates",
+              explanation: "Some dates have special readings.",
+            },
+            {
+              title: "Months",
+              explanation: "Months are commonly number + gatsu.",
+            },
+          ],
+          example: "Getsuyoubi = Monday",
+        },
+        practice: [
+          {
+            question: "Which day is getsuyoubi?",
+            options: ["Monday", "Tuesday", "Friday", "Sunday"],
+            correctAnswer: "Monday",
+            explanation:
+              "Getsuyoubi means Monday.",
+          },
+        ],
+      },
+      {
+        id: "jp-18",
+        order: 18,
+        title: "Time Expressions",
+        description: "Learn how to say hours and simple time expressions.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Time expressions are useful for schedules and appointments.",
+          points: [
+            {
+              title: "Ji",
+              explanation: "Used for hours.",
+            },
+            {
+              title: "Fun / pun",
+              explanation: "Used for minutes, with pronunciation changes in some numbers.",
+            },
+            {
+              title: "Gozen / gogo",
+              explanation: "AM and PM expressions.",
+            },
+          ],
+          example: "San-ji = 3 o’clock",
+        },
+        practice: [
+          {
+            question: "What does san-ji mean?",
+            options: ["3 o’clock", "3 minutes", "3 days", "3 people"],
+            correctAnswer: "3 o’clock",
+            explanation:
+              "San-ji means three o’clock.",
+          },
+        ],
+      },
+      {
+        id: "jp-19",
+        order: 19,
+        title: "Basic Sentence Structure",
+        description: "Understand the order of simple Japanese sentences.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Japanese sentence structure differs from English, so the basic pattern is important.",
+          points: [
+            {
+              title: "Topic",
+              explanation: "Often marked with は.",
+            },
+            {
+              title: "Predicate",
+              explanation: "Generally comes at the end.",
+            },
+            {
+              title: "Politeness",
+              explanation: "Beginner polite sentences often end with desu or polite verbs.",
+            },
+          ],
+          example: "Watashi wa gakusei desu.",
+        },
+        practice: [
+          {
+            question: "What generally comes at the end of a basic Japanese sentence?",
+            options: ["The predicate", "The topic only", "The greeting", "The subject always"],
+            correctAnswer: "The predicate",
+            explanation:
+              "The predicate generally comes at the end.",
+          },
+        ],
+      },
+      {
+        id: "jp-20",
+        order: 20,
+        title: "は Particle",
+        description: "Learn how は marks the topic of a sentence.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "The particle は tells the listener what the sentence is mainly about.",
+          points: [
+            {
+              title: "Topic marker",
+              explanation: "は commonly marks the topic.",
+            },
+            {
+              title: "Pronunciation",
+              explanation: "As a particle, は is pronounced wa.",
+            },
+            {
+              title: "Contrast",
+              explanation: "It can also create contrast depending on context.",
+            },
+          ],
+          example: "Watashi wa gakusei desu.",
+        },
+        practice: [
+          {
+            question: "What is the main role of は?",
+            options: ["Mark the topic", "Mark the object", "Mark the location", "Mark past tense"],
+            correctAnswer: "Mark the topic",
+            explanation:
+              "は commonly marks the topic.",
+          },
+        ],
+      },
+      {
+        id: "jp-21",
+        order: 21,
+        title: "を & に Particles",
+        description: "Learn two important particles for beginner sentences.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "を and に have different jobs and appear frequently.",
+          points: [
+            {
+              title: "を",
+              explanation: "Commonly marks the direct object and is pronounced o.",
+            },
+            {
+              title: "に",
+              explanation: "Can mark destinations, times and other relationships.",
+            },
+            {
+              title: "Examples",
+              explanation: "Hon o yomimasu; gakkou ni ikimasu.",
+            },
+          ],
+          example: "Hon o yomimasu.",
+        },
+        practice: [
+          {
+            question: "Which particle commonly marks the direct object?",
+            options: ["を", "に", "は", "で"],
+            correctAnswer: "を",
+            explanation:
+              "を commonly marks the direct object.",
+          },
+        ],
+      },
+      {
+        id: "jp-22",
+        order: 22,
+        title: "で・と・も Particles",
+        description: "Learn three more useful particles for everyday sentences.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "These particles express location of an action, connection and addition.",
+          points: [
+            {
+              title: "で",
+              explanation: "Can mark the place where an action occurs.",
+            },
+            {
+              title: "と",
+              explanation: "Can connect nouns or mean with in some contexts.",
+            },
+            {
+              title: "も",
+              explanation: "Can mean also or too.",
+            },
+          ],
+          example: "Gakkou de benkyou shimasu.",
+        },
+        practice: [
+          {
+            question: "Which particle can mark where an action happens?",
+            options: ["で", "と", "も", "を"],
+            correctAnswer: "で",
+            explanation:
+              "で commonly marks the place where an action occurs.",
+          },
+        ],
+      },
+      {
+        id: "jp-23",
+        order: 23,
+        title: "です & じゃないです",
+        description: "Learn polite positive and negative noun sentences.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Desu and ja nai desu help beginners say what something is or is not.",
+          points: [
+            {
+              title: "です",
+              explanation: "Makes many noun sentences polite.",
+            },
+            {
+              title: "じゃないです",
+              explanation: "A polite beginner negative form.",
+            },
+            {
+              title: "Contrast",
+              explanation: "Gakusei desu vs. gakusei ja nai desu.",
+            },
+          ],
+          example: "Gakusei ja nai desu.",
+        },
+        practice: [
+          {
+            question: "Which sentence means \"I am not a student\"?",
+            options: ["Gakusei desu.", "Gakusei ja nai desu.", "Gakusei o desu.", "Gakusei ni desu."],
+            correctAnswer: "Gakusei ja nai desu.",
+            explanation:
+              "It is a basic polite negative noun sentence.",
+          },
+        ],
+      },
+      {
+        id: "jp-24",
+        order: 24,
+        title: "Basic Verbs",
+        description: "Learn common verbs and basic polite verb sentences.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Verbs are central to Japanese sentences and usually appear toward the end.",
+          points: [
+            {
+              title: "Tabemasu",
+              explanation: "To eat.",
+            },
+            {
+              title: "Nomimasu",
+              explanation: "To drink.",
+            },
+            {
+              title: "Ikimasu",
+              explanation: "To go.",
+            },
+            {
+              title: "Yomimasu",
+              explanation: "To read.",
+            },
+          ],
+          example: "Nomimasu = to drink",
+        },
+        practice: [
+          {
+            question: "Which verb means to drink?",
+            options: ["Tabemasu", "Nomimasu", "Ikimasu", "Yomimasu"],
+            correctAnswer: "Nomimasu",
+            explanation:
+              "Nomimasu means to drink.",
+          },
+        ],
+      },
+      {
+        id: "jp-25",
+        order: 25,
+        title: "Foundation Review & Conversation",
+        description: "Bring the foundation together in a simple beginner conversation.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A strong foundation combines scripts, greetings, introductions, particles and polite forms.",
+          points: [
+            {
+              title: "Greeting",
+              explanation: "Choose an appropriate greeting.",
+            },
+            {
+              title: "Introduction",
+              explanation: "Use watashi wa ... desu.",
+            },
+            {
+              title: "Simple response",
+              explanation: "Use familiar expressions and basic sentence patterns.",
+            },
+            {
+              title: "Conversation flow",
+              explanation: "Move naturally from greeting to introduction and a simple question.",
+            },
+          ],
+          example: "Greeting → introduction → simple question",
+        },
+        practice: [
+          {
+            question: "Which sequence fits a simple beginner conversation?",
+            options: ["Greeting → introduction → simple question", "Advanced grammar → debate", "Random words only", "Numbers only"],
+            correctAnswer: "Greeting → introduction → simple question",
+            explanation:
+              "That sequence creates a natural beginner conversation.",
           },
         ],
       },
