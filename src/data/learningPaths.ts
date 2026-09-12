@@ -1160,168 +1160,831 @@ export const learningPaths: LearningPath[] = [
     category: "Engineering & Technology",
     icon: "🧠",
     description:
-      "Understand the foundations of data structures and algorithms step by step.",
-    estimatedMinutes: 20,
+      "Build a strong foundation in data structures, algorithms, complexity and problem-solving patterns step by step.",
+    estimatedMinutes: 300,
     chapters: [
       {
         id: "dsa-01",
         order: 1,
-        title: "What Is an Algorithm?",
-        description: "Understand algorithms and why they matter.",
+        title: "What Is DSA?",
+        description: "Understand what data structures and algorithms are and how they work together.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "An algorithm is a step-by-step procedure used to solve a problem.",
+            "Data structures organize data; algorithms process that data to solve problems.",
           points: [
-            {
-              title: "Input",
-              explanation:
-                "An algorithm usually receives some input that it needs to process.",
-            },
-            {
-              title: "Processing",
-              explanation:
-                "The algorithm applies a sequence of logical steps to the input.",
-            },
-            {
-              title: "Output",
-              explanation:
-                "The algorithm produces a result after completing its steps.",
-            },
+            { title: "Data Structure", explanation: "A way of organizing and storing data so it can be used efficiently." },
+            { title: "Algorithm", explanation: "A step-by-step method for solving a problem." },
+            { title: "Problem solving", explanation: "Good DSA starts by understanding the problem, inputs, outputs and constraints." },
           ],
-          example: "Finding the largest number in a list.",
+          example: "Choosing an array to store a fixed ordered collection of marks.",
         },
         practice: [
           {
-            question: "What is an algorithm?",
-            options: [
-              "A step-by-step problem-solving procedure",
-              "Only a programming language",
-              "A computer monitor",
-              "A database",
-            ],
-            correctAnswer: "A step-by-step problem-solving procedure",
-            explanation:
-              "An algorithm describes logical steps for solving a problem.",
+            question: "What does DSA combine?",
+            options: ["Data structures and algorithms", "Only databases", "Only programming languages", "Only hardware"],
+            correctAnswer: "Data structures and algorithms",
+            explanation: "Data structures organize data while algorithms provide ways to process it.",
           },
         ],
       },
-
       {
         id: "dsa-02",
         order: 2,
-        title: "Time Complexity",
-        description: "Learn how to think about algorithm efficiency.",
+        title: "Problem-Solving Basics",
+        description: "Learn how to translate a problem into inputs, outputs and clear steps.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Time complexity describes how the amount of work performed by an algorithm grows as the input size increases.",
+            "Before choosing a data structure, understand exactly what the problem asks you to compute.",
           points: [
-            {
-              title: "Input size",
-              explanation:
-                "We commonly represent input size using n.",
-            },
-            {
-              title: "Big O",
-              explanation:
-                "Big O notation gives a high-level description of growth.",
-            },
-            {
-              title: "Common complexities",
-              explanation:
-                "O(1), O(log n), O(n), O(n log n) and O(n²) are common examples.",
-            },
+            { title: "Input", explanation: "The values supplied to a solution." },
+            { title: "Output", explanation: "The result the solution must produce." },
+            { title: "Constraints", explanation: "Limits such as input size, time or memory that guide solution choices." },
           ],
+          example: "For a maximum-value problem, input is a list of numbers and output is the largest number.",
         },
         practice: [
           {
-            question: "Which complexity represents constant time?",
-            options: ["O(1)", "O(n)", "O(n²)", "O(log n)"],
-            correctAnswer: "O(1)",
-            explanation:
-              "O(1) means the amount of work does not grow with input size.",
+            question: "What should you identify first when solving a programming problem?",
+            options: ["The input, output and constraints", "The UI color", "The database password", "The CPU brand"],
+            correctAnswer: "The input, output and constraints",
+            explanation: "Understanding inputs, outputs and constraints gives direction to the solution.",
           },
         ],
       },
-
       {
         id: "dsa-03",
         order: 3,
-        title: "Arrays",
-        description: "Understand arrays and basic array operations.",
+        title: "Algorithms & Pseudocode",
+        description: "Learn to describe a solution before writing code.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "An array stores multiple values in an ordered collection.",
+            "Pseudocode expresses logic in a simple, language-independent form.",
           points: [
-            {
-              title: "Index",
-              explanation:
-                "Array elements are accessed using positions called indexes.",
-            },
-            {
-              title: "Access",
-              explanation:
-                "Accessing an element by index is typically very fast.",
-            },
-            {
-              title: "Traversal",
-              explanation:
-                "Traversal means visiting the elements one by one.",
-            },
+            { title: "Sequence", explanation: "Steps are performed in a defined order." },
+            { title: "Selection", explanation: "A condition chooses between different actions." },
+            { title: "Iteration", explanation: "A loop repeats a step while a condition or range requires it." },
           ],
+          example: "Pseudocode for finding a maximum: set max to the first value, then compare each remaining value.",
         },
         practice: [
           {
-            question: "How are array elements commonly accessed?",
-            options: ["Using an index", "Using a password", "Using a file", "Using a port"],
-            correctAnswer: "Using an index",
-            explanation:
-              "Arrays use indexes to identify element positions.",
+            question: "Why use pseudocode?",
+            options: ["To plan logic before implementation", "To replace all programming languages", "To store files", "To compile a program"],
+            correctAnswer: "To plan logic before implementation",
+            explanation: "Pseudocode helps you reason about the algorithm without focusing on programming syntax.",
           },
         ],
       },
-
       {
         id: "dsa-04",
         order: 4,
-        title: "Searching",
-        description: "Learn linear and binary search concepts.",
+        title: "Time Complexity",
+        description: "Understand how running time grows with input size.",
         estimatedMinutes: 10,
         lesson: {
           introduction:
-            "Searching means finding a required value inside a collection.",
+            "Time complexity focuses on growth rather than measuring seconds on one machine.",
           points: [
-            {
-              title: "Linear search",
-              explanation:
-                "Linear search checks elements one by one.",
-            },
-            {
-              title: "Binary search",
-              explanation:
-                "Binary search repeatedly divides a sorted search space in half.",
-            },
-            {
-              title: "Sorted data",
-              explanation:
-                "Binary search requires the search data to be ordered.",
-            },
+            { title: "Input size", explanation: "n commonly represents the amount of input." },
+            { title: "Growth rate", explanation: "We compare how the number of operations changes as n grows." },
+            { title: "Big O", explanation: "Big O describes an upper-bound style growth classification commonly used in DSA." },
           ],
+          example: "Checking one array element by index is O(1).",
         },
         practice: [
           {
-            question: "What condition is normally required for binary search?",
-            options: [
-              "The data must be sorted",
-              "The data must be random",
-              "The array must contain one item",
-              "The data must be encrypted",
-            ],
-            correctAnswer: "The data must be sorted",
-            explanation:
-              "Binary search relies on ordered data to eliminate half of the search space.",
+            question: "Which notation represents constant time?",
+            options: ["O(1)", "O(n)", "O(n²)", "O(2ⁿ)"],
+            correctAnswer: "O(1)",
+            explanation: "O(1) stays constant as the input size grows.",
+          },
+        ],
+      },
+      {
+        id: "dsa-05",
+        order: 5,
+        title: "Space Complexity",
+        description: "Learn how algorithms use extra memory.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Space complexity considers how additional memory requirements grow with input size.",
+          points: [
+            { title: "Auxiliary space", explanation: "Extra memory used by the algorithm apart from the input itself." },
+            { title: "Constant space", explanation: "A fixed number of variables can be O(1) extra space." },
+            { title: "Growing space", explanation: "Creating an additional array of n elements generally requires O(n) space." },
+          ],
+          example: "Using a few variables to track a running sum uses constant extra space.",
+        },
+        practice: [
+          {
+            question: "Which situation usually requires O(n) extra space?",
+            options: ["Creating an additional array of n elements", "Using three integer variables", "Reading one value", "Swapping two values"],
+            correctAnswer: "Creating an additional array of n elements",
+            explanation: "An additional array with n elements grows with the input size.",
+          },
+        ],
+      },
+      {
+        id: "dsa-06",
+        order: 6,
+        title: "Arrays: Basics",
+        description: "Understand arrays, indexes and traversal.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Arrays store elements in an ordered sequence and are commonly accessed by index.",
+          points: [
+            { title: "Index", explanation: "A position used to access an element; many languages use zero-based indexing." },
+            { title: "Access", explanation: "Direct index access is typically O(1) for an array." },
+            { title: "Traversal", explanation: "Visiting elements sequentially, usually O(n)." },
+          ],
+          example: "In [10,20,30], index 0 refers to 10 in a zero-based language.",
+        },
+        practice: [
+          {
+            question: "How is an array element commonly accessed?",
+            options: ["By index", "By IP address", "By file extension", "By port number"],
+            correctAnswer: "By index",
+            explanation: "Indexes identify positions in an array.",
+          },
+        ],
+      },
+      {
+        id: "dsa-07",
+        order: 7,
+        title: "Array Operations",
+        description: "Learn insertion, deletion, update and traversal costs.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Array operations have different costs depending on where elements are changed.",
+          points: [
+            { title: "Update", explanation: "Changing an existing indexed element is typically O(1)." },
+            { title: "Insertion", explanation: "Inserting near the beginning may require shifting many elements." },
+            { title: "Deletion", explanation: "Deleting from the middle may also require shifting later elements." },
+          ],
+          example: "Inserting 5 at the start of [10,20,30] requires moving existing elements.",
+        },
+        practice: [
+          {
+            question: "Why can inserting at the beginning of an array be expensive?",
+            options: ["Existing elements may need to shift", "Arrays cannot store numbers", "Indexes disappear", "The CPU must restart"],
+            correctAnswer: "Existing elements may need to shift",
+            explanation: "Elements after the insertion point may need to shift.",
+          },
+        ],
+      },
+      {
+        id: "dsa-08",
+        order: 8,
+        title: "Strings",
+        description: "Understand strings as sequences and learn common operations.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Strings are sequences of characters and many string problems can be approached like array problems.",
+          points: [
+            { title: "Characters", explanation: "A string is made from individual characters." },
+            { title: "Traversal", explanation: "Characters can be processed one by one." },
+            { title: "Comparison", explanation: "String problems often involve matching, counting or comparing characters." },
+          ],
+          example: "Counting vowels by scanning each character once is O(n).",
+        },
+        practice: [
+          {
+            question: "What is a string?",
+            options: ["A sequence of characters", "A network protocol", "A database table", "A CPU instruction"],
+            correctAnswer: "A sequence of characters",
+            explanation: "A string represents an ordered sequence of characters.",
+          },
+        ],
+      },
+      {
+        id: "dsa-09",
+        order: 9,
+        title: "Linear Search",
+        description: "Learn to search an unsorted collection sequentially.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Linear search checks elements from one end until the target is found or the collection ends.",
+          points: [
+            { title: "Process", explanation: "Compare the target with each element in order." },
+            { title: "Best case", explanation: "The target is at the first position, giving O(1) work." },
+            { title: "Worst case", explanation: "The target is last or absent, giving O(n) work." },
+          ],
+          example: "Searching [7,4,9,2] for 9 checks 7, then 4, then 9.",
+        },
+        practice: [
+          {
+            question: "What is the worst-case time complexity of linear search?",
+            options: ["O(n)", "O(1)", "O(log n)", "O(n²)"],
+            correctAnswer: "O(n)",
+            explanation: "In the worst case, linear search examines every element.",
+          },
+        ],
+      },
+      {
+        id: "dsa-10",
+        order: 10,
+        title: "Binary Search",
+        description: "Learn the divide-and-search method for sorted data.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Binary search compares with the middle element and discards half of the remaining search space.",
+          points: [
+            { title: "Sorted input", explanation: "The collection must be ordered for the standard binary search method." },
+            { title: "Middle", explanation: "The middle value determines which half may contain the target." },
+            { title: "Complexity", explanation: "Binary search runs in O(log n) time on a sorted array." },
+          ],
+          example: "Searching a sorted list of 16 values repeatedly halves the remaining range.",
+        },
+        practice: [
+          {
+            question: "What is required for standard binary search?",
+            options: ["Sorted data", "Encrypted data", "A linked list only", "Exactly two elements"],
+            correctAnswer: "Sorted data",
+            explanation: "Binary search relies on order to eliminate half the candidates each step.",
+          },
+        ],
+      },
+      {
+        id: "dsa-11",
+        order: 11,
+        title: "Sorting Fundamentals",
+        description: "Understand why sorting helps and compare basic sorting ideas.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Sorting arranges values according to an order such as ascending or descending.",
+          points: [
+            { title: "Why sort?", explanation: "Sorted data can make searching and later processing easier." },
+            { title: "Stability", explanation: "A stable sort preserves the relative order of equal-key elements." },
+            { title: "In-place", explanation: "An in-place algorithm uses little additional memory for the rearrangement." },
+          ],
+          example: "Sorting marks from lowest to highest creates an ordered sequence.",
+        },
+        practice: [
+          {
+            question: "What is the main purpose of sorting?",
+            options: ["To arrange data according to an order", "To encrypt data", "To remove all duplicates automatically", "To create a database"],
+            correctAnswer: "To arrange data according to an order",
+            explanation: "Sorting arranges elements according to a chosen ordering.",
+          },
+        ],
+      },
+      {
+        id: "dsa-12",
+        order: 12,
+        title: "Bubble Sort",
+        description: "Learn bubble sort and its repeated adjacent comparisons.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Bubble sort repeatedly compares neighboring elements and swaps them when they are out of order.",
+          points: [
+            { title: "Adjacent comparison", explanation: "Each step compares neighboring elements." },
+            { title: "Passes", explanation: "Multiple passes move larger values toward the end." },
+            { title: "Complexity", explanation: "Basic bubble sort has O(n²) worst-case time." },
+          ],
+          example: "For [3,1,2], comparing 3 and 1 causes a swap.",
+        },
+        practice: [
+          {
+            question: "What does bubble sort repeatedly compare?",
+            options: ["Adjacent elements", "Only the first and last elements", "Random files", "Tree nodes only"],
+            correctAnswer: "Adjacent elements",
+            explanation: "Bubble sort is based on repeated comparisons of adjacent elements.",
+          },
+        ],
+      },
+      {
+        id: "dsa-13",
+        order: 13,
+        title: "Selection Sort",
+        description: "Learn how selection sort repeatedly chooses the next minimum or maximum.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Selection sort divides the array conceptually into sorted and unsorted regions.",
+          points: [
+            { title: "Selection", explanation: "Find the smallest remaining element for ascending order." },
+            { title: "Swap", explanation: "Place the selected element at the next sorted position." },
+            { title: "Complexity", explanation: "Selection sort performs O(n²) comparisons in its basic form." },
+          ],
+          example: "For [4,2,3], the first minimum is 2 and is placed at index 0.",
+        },
+        practice: [
+          {
+            question: "What does selection sort select in an ascending pass?",
+            options: ["The smallest remaining element", "The largest file", "A random element only", "The middle element always"],
+            correctAnswer: "The smallest remaining element",
+            explanation: "Selection sort selects the smallest remaining value for the next position.",
+          },
+        ],
+      },
+      {
+        id: "dsa-14",
+        order: 14,
+        title: "Insertion Sort",
+        description: "Learn insertion sort by growing a sorted prefix.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Insertion sort takes one element at a time and inserts it into its correct place in the already-sorted portion.",
+          points: [
+            { title: "Sorted prefix", explanation: "The left part of the array remains sorted after each insertion." },
+            { title: "Shifting", explanation: "Larger elements may shift right to make space." },
+            { title: "Best case", explanation: "Already sorted data can be handled in O(n) time with the usual implementation." },
+          ],
+          example: "In [1,3,2], 2 is inserted between 1 and 3.",
+        },
+        practice: [
+          {
+            question: "What does insertion sort maintain during processing?",
+            options: ["A sorted prefix", "A sorted tree", "Only the last element", "A hash table"],
+            correctAnswer: "A sorted prefix",
+            explanation: "Insertion sort grows a sorted prefix one element at a time.",
+          },
+        ],
+      },
+      {
+        id: "dsa-15",
+        order: 15,
+        title: "Recursion",
+        description: "Understand functions that solve a problem through smaller versions of itself.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A recursive function calls itself with a smaller or simpler input.",
+          points: [
+            { title: "Base case", explanation: "Stops recursion and prevents infinite calls." },
+            { title: "Recursive case", explanation: "Moves the problem toward the base case." },
+            { title: "Call stack", explanation: "Each active recursive call uses stack space." },
+          ],
+          example: "Factorial can be defined as n × factorial(n-1), with factorial(0)=1.",
+        },
+        practice: [
+          {
+            question: "What prevents a recursive function from continuing forever?",
+            options: ["A base case", "A larger input", "A random loop", "A database"],
+            correctAnswer: "A base case",
+            explanation: "The base case provides the stopping condition.",
+          },
+        ],
+      },
+      {
+        id: "dsa-16",
+        order: 16,
+        title: "Linked Lists",
+        description: "Understand nodes and links in a singly linked list.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A linked list stores data in nodes connected through references rather than requiring contiguous storage.",
+          points: [
+            { title: "Node", explanation: "A node contains data and a link to another node." },
+            { title: "Head", explanation: "The head references the first node." },
+            { title: "Traversal", explanation: "Following links one by one takes O(n) time to reach a distant node." },
+          ],
+          example: "A list can contain nodes 10 → 20 → 30, where each node points to the next.",
+        },
+        practice: [
+          {
+            question: "What does the head of a singly linked list represent?",
+            options: ["The first node", "The last array index", "The middle node always", "The list size only"],
+            correctAnswer: "The first node",
+            explanation: "The head points to the first node in the list.",
+          },
+        ],
+      },
+      {
+        id: "dsa-17",
+        order: 17,
+        title: "Linked List Operations",
+        description: "Learn insertion, deletion and traversal in linked lists.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Linked lists can efficiently change links when the relevant node reference is already known.",
+          points: [
+            { title: "Insertion", explanation: "Adding a node can be O(1) when inserting at a known position such as the head." },
+            { title: "Deletion", explanation: "Removing a known node can involve changing links rather than shifting all elements." },
+            { title: "Traversal cost", explanation: "Finding a position usually requires following links from the head." },
+          ],
+          example: "Adding a node at the head of a singly linked list changes the head reference.",
+        },
+        practice: [
+          {
+            question: "Why can head insertion be O(1) in a linked list?",
+            options: ["Only a few links need to be changed", "All nodes must be sorted", "Every node must be copied", "The list must be converted to an array"],
+            correctAnswer: "Only a few links need to be changed",
+            explanation: "Head insertion changes the new node link and the head reference.",
+          },
+        ],
+      },
+      {
+        id: "dsa-18",
+        order: 18,
+        title: "Stacks",
+        description: "Understand LIFO behavior and common stack operations.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A stack follows Last In, First Out: the most recently added item is removed first.",
+          points: [
+            { title: "Push", explanation: "Adds an item to the top." },
+            { title: "Pop", explanation: "Removes the top item." },
+            { title: "Peek", explanation: "Reads the top item without removing it." },
+          ],
+          example: "A stack can model undo actions where the newest action is undone first.",
+        },
+        practice: [
+          {
+            question: "Which principle does a stack follow?",
+            options: ["LIFO", "FIFO", "Random access only", "Priority only"],
+            correctAnswer: "LIFO",
+            explanation: "Stacks follow Last In, First Out.",
+          },
+        ],
+      },
+      {
+        id: "dsa-19",
+        order: 19,
+        title: "Queues",
+        description: "Understand FIFO behavior and common queue operations.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A queue follows First In, First Out: the earliest inserted item leaves first.",
+          points: [
+            { title: "Enqueue", explanation: "Adds an item to the rear." },
+            { title: "Dequeue", explanation: "Removes an item from the front." },
+            { title: "FIFO", explanation: "The first item added is the first item removed." },
+          ],
+          example: "A printer queue processes print jobs in arrival order.",
+        },
+        practice: [
+          {
+            question: "Which principle does a queue follow?",
+            options: ["FIFO", "LIFO", "Binary search", "Recursion"],
+            correctAnswer: "FIFO",
+            explanation: "Queues follow First In, First Out.",
+          },
+        ],
+      },
+      {
+        id: "dsa-20",
+        order: 20,
+        title: "Hashing",
+        description: "Understand hash tables, keys and average constant-time lookup.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Hashing maps keys to positions so values can often be found quickly.",
+          points: [
+            { title: "Hash function", explanation: "Transforms a key into a hash value or bucket location." },
+            { title: "Collision", explanation: "Different keys can map to the same location." },
+            { title: "Average lookup", explanation: "Well-designed hash tables often provide average O(1) lookup." },
+          ],
+          example: "A student ID can be used as a key to retrieve a stored record.",
+        },
+        practice: [
+          {
+            question: "What is a collision in hashing?",
+            options: ["Two keys map to the same location", "A program crashes", "A list becomes sorted", "A tree loses its root"],
+            correctAnswer: "Two keys map to the same location",
+            explanation: "A collision occurs when multiple keys map to the same hash location.",
+          },
+        ],
+      },
+      {
+        id: "dsa-21",
+        order: 21,
+        title: "Trees",
+        description: "Understand hierarchical data and basic tree terminology.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A tree is a hierarchical structure made of nodes connected by edges.",
+          points: [
+            { title: "Root", explanation: "The top node of a tree." },
+            { title: "Parent and child", explanation: "A parent node connects downward to child nodes." },
+            { title: "Leaf", explanation: "A node with no children." },
+          ],
+          example: "A folder structure is a common real-world example of hierarchical data.",
+        },
+        practice: [
+          {
+            question: "What is a leaf node?",
+            options: ["A node with no children", "The root only", "A node with two parents", "An array index"],
+            correctAnswer: "A node with no children",
+            explanation: "A leaf has no child nodes.",
+          },
+        ],
+      },
+      {
+        id: "dsa-22",
+        order: 22,
+        title: "Tree Traversals",
+        description: "Learn preorder, inorder and postorder traversal ideas.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Tree traversal defines the order in which nodes are visited.",
+          points: [
+            { title: "Preorder", explanation: "Visit node, then left subtree, then right subtree." },
+            { title: "Inorder", explanation: "Visit left subtree, node, then right subtree." },
+            { title: "Postorder", explanation: "Visit left subtree, right subtree, then node." },
+          ],
+          example: "For a binary search tree, inorder traversal produces values in sorted order.",
+        },
+        practice: [
+          {
+            question: "Which traversal visits the root between the left and right subtrees?",
+            options: ["Inorder", "Preorder", "Postorder", "Level order only"],
+            correctAnswer: "Inorder",
+            explanation: "Inorder visits left subtree, root, then right subtree.",
+          },
+        ],
+      },
+      {
+        id: "dsa-23",
+        order: 23,
+        title: "Binary Search Trees",
+        description: "Understand how a BST uses ordering to organize values.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A binary search tree keeps smaller values on the left and larger values on the right under the usual rule.",
+          points: [
+            { title: "Binary tree", explanation: "Each node has at most two children." },
+            { title: "BST property", explanation: "Values in the left subtree are smaller and values in the right subtree are larger, assuming unique keys." },
+            { title: "Search", explanation: "A balanced BST can support search in O(log n) time, while a skewed tree can degrade to O(n)." },
+          ],
+          example: "Inserting 5 into a BST with root 8 moves left because 5 is smaller.",
+        },
+        practice: [
+          {
+            question: "Where is a value smaller than the BST root normally placed?",
+            options: ["In the left subtree", "In the right subtree", "Outside the tree", "In a queue"],
+            correctAnswer: "In the left subtree",
+            explanation: "The BST ordering places smaller values in the left subtree.",
+          },
+        ],
+      },
+      {
+        id: "dsa-24",
+        order: 24,
+        title: "Heaps & Priority Queues",
+        description: "Understand heaps and why they are useful for priority-based processing.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A heap is a complete binary tree commonly used to implement a priority queue.",
+          points: [
+            { title: "Min-heap", explanation: "The smallest value is kept at the root." },
+            { title: "Max-heap", explanation: "The largest value is kept at the root." },
+            { title: "Priority queue", explanation: "Elements are processed according to priority rather than arrival order alone." },
+          ],
+          example: "A task scheduler can use a priority queue to process the highest-priority task first.",
+        },
+        practice: [
+          {
+            question: "Which structure is commonly used to implement a priority queue?",
+            options: ["Heap", "Stack only", "String", "Linked file"],
+            correctAnswer: "Heap",
+            explanation: "Heaps provide efficient priority-based insertion and removal.",
+          },
+        ],
+      },
+      {
+        id: "dsa-25",
+        order: 25,
+        title: "Graphs",
+        description: "Understand vertices, edges and common graph representations.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Graphs model relationships between entities using vertices and edges.",
+          points: [
+            { title: "Vertex", explanation: "Represents an entity or point in the graph." },
+            { title: "Edge", explanation: "Represents a connection between vertices." },
+            { title: "Directed graph", explanation: "Edges have a direction from one vertex to another." },
+          ],
+          example: "A road network can be modeled as cities connected by roads.",
+        },
+        practice: [
+          {
+            question: "What does an edge represent in a graph?",
+            options: ["A connection between vertices", "A sorting algorithm", "A memory address only", "A variable type"],
+            correctAnswer: "A connection between vertices",
+            explanation: "Edges represent relationships or connections between vertices.",
+          },
+        ],
+      },
+      {
+        id: "dsa-26",
+        order: 26,
+        title: "BFS & DFS",
+        description: "Learn two fundamental graph/tree traversal strategies.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Breadth-first search explores level by level, while depth-first search follows a path deeply before backtracking.",
+          points: [
+            { title: "BFS", explanation: "Breadth-first search commonly uses a queue." },
+            { title: "DFS", explanation: "Depth-first search can be implemented using recursion or an explicit stack." },
+            { title: "Visited tracking", explanation: "A visited set helps avoid repeatedly processing the same node in general graph traversal." },
+          ],
+          example: "BFS is useful for finding the minimum number of edges in an unweighted graph.",
+        },
+        practice: [
+          {
+            question: "Which data structure is commonly associated with BFS?",
+            options: ["Queue", "Stack", "Heap only", "Hash function"],
+            correctAnswer: "Queue",
+            explanation: "BFS processes nodes in breadth-first order using a queue.",
+          },
+        ],
+      },
+      {
+        id: "dsa-27",
+        order: 27,
+        title: "Greedy Algorithms",
+        description: "Understand the greedy strategy and when it can work.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A greedy algorithm makes the best-looking local choice at each step.",
+          points: [
+            { title: "Local choice", explanation: "Choose what appears best now according to the problem rule." },
+            { title: "No backtracking", explanation: "A basic greedy method usually commits to choices rather than revisiting them." },
+            { title: "Correctness", explanation: "Greedy works only for problems with properties that make local choices lead to an optimal solution." },
+          ],
+          example: "Selecting the earliest finishing compatible activity is a classic greedy strategy for activity selection.",
+        },
+        practice: [
+          {
+            question: "What characterizes a greedy algorithm?",
+            options: ["Making a locally best choice at each step", "Trying every possible solution", "Always using recursion", "Only sorting strings"],
+            correctAnswer: "Making a locally best choice at each step",
+            explanation: "Greedy algorithms commit to a locally optimal-looking choice at each step.",
+          },
+        ],
+      },
+      {
+        id: "dsa-28",
+        order: 28,
+        title: "Backtracking",
+        description: "Learn systematic trial, rejection and undo of choices.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Backtracking explores possible choices and abandons a partial solution when it cannot lead to a valid answer.",
+          points: [
+            { title: "Choice", explanation: "Select one possibility to explore." },
+            { title: "Constraint", explanation: "A rule that determines whether a partial solution is valid." },
+            { title: "Undo", explanation: "Remove or reverse a choice before trying another option." },
+          ],
+          example: "Sudoku and N-Queens are common examples where backtracking explores valid arrangements.",
+        },
+        practice: [
+          {
+            question: "What does backtracking do when a partial solution becomes invalid?",
+            options: ["It undoes the choice and tries another", "It always stops the entire program", "It sorts the input", "It deletes the problem"],
+            correctAnswer: "It undoes the choice and tries another",
+            explanation: "Backtracking reverses the unsuitable choice and explores another possibility.",
+          },
+        ],
+      },
+      {
+        id: "dsa-29",
+        order: 29,
+        title: "Dynamic Programming",
+        description: "Understand overlapping subproblems and optimal substructure.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Dynamic programming stores results of smaller subproblems so they do not have to be recomputed.",
+          points: [
+            { title: "Overlapping subproblems", explanation: "The same smaller problems occur repeatedly." },
+            { title: "Memoization", explanation: "Top-down recursion stores computed results." },
+            { title: "Tabulation", explanation: "Bottom-up DP fills a table from smaller cases to larger cases." },
+          ],
+          example: "Fibonacci can be optimized by storing previously computed values.",
+        },
+        practice: [
+          {
+            question: "Why does dynamic programming store subproblem results?",
+            options: ["To avoid repeated computation", "To randomize answers", "To remove all loops", "To encrypt data"],
+            correctAnswer: "To avoid repeated computation",
+            explanation: "Stored results let the algorithm reuse work instead of recomputing the same subproblems.",
+          },
+        ],
+      },
+      {
+        id: "dsa-30",
+        order: 30,
+        title: "Complexity Patterns",
+        description: "Recognize common complexity classes and compare their growth.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Understanding common growth rates helps choose scalable solutions.",
+          points: [
+            { title: "O(1)", explanation: "Constant growth." },
+            { title: "O(log n) and O(n)", explanation: "Logarithmic grows slowly; linear grows proportionally with input size." },
+            { title: "O(n²) and exponential", explanation: "Quadratic and exponential growth become expensive much faster as n increases." },
+          ],
+          example: "A nested loop over all pairs of n elements is often O(n²).",
+        },
+        practice: [
+          {
+            question: "Which usually grows faster as n becomes large?",
+            options: ["O(n²)", "O(log n)", "O(1)", "O(n)"],
+            correctAnswer: "O(n²)",
+            explanation: "Quadratic growth eventually outpaces constant, logarithmic and linear growth.",
+          },
+        ],
+      },
+      {
+        id: "dsa-31",
+        order: 31,
+        title: "Two Pointers & Sliding Window",
+        description: "Learn reusable patterns for array and string problems.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Two pointers and sliding windows can reduce repeated work in many sequence problems.",
+          points: [
+            { title: "Two pointers", explanation: "Use two indexes that move through a sequence according to the problem logic." },
+            { title: "Sliding window", explanation: "Maintain a changing contiguous range instead of recomputing each range from scratch." },
+            { title: "Efficiency", explanation: "These patterns can turn some nested-looking solutions into O(n) scans." },
+          ],
+          example: "Finding whether a sorted array contains a pair with a target sum can use left and right pointers.",
+        },
+        practice: [
+          {
+            question: "What is a sliding window?",
+            options: ["A maintained contiguous range of elements", "A GUI panel", "A database lock", "A tree root"],
+            correctAnswer: "A maintained contiguous range of elements",
+            explanation: "A sliding window represents a changing contiguous portion of a sequence.",
+          },
+        ],
+      },
+      {
+        id: "dsa-32",
+        order: 32,
+        title: "DSA Problem-Solving Patterns",
+        description: "Learn how to choose an approach from constraints and problem structure.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "Strong DSA problem solving comes from recognizing patterns instead of memorizing isolated solutions.",
+          points: [
+            { title: "Brute force first", explanation: "A simple solution can clarify correctness before optimization." },
+            { title: "Constraints guide choices", explanation: "Large n may rule out O(n²) or exponential approaches." },
+            { title: "Pattern recognition", explanation: "Searching, two pointers, recursion, hashing and DP solve recurring problem shapes." },
+          ],
+          example: "If a problem asks for repeated fast membership checks, hashing may be a strong candidate.",
+        },
+        practice: [
+          {
+            question: "What should influence your algorithm choice most?",
+            options: ["Problem structure and constraints", "Variable names only", "Screen size", "Programming font"],
+            correctAnswer: "Problem structure and constraints",
+            explanation: "The problem structure and constraints determine which approaches are practical.",
+          },
+        ],
+      },
+      {
+        id: "dsa-33",
+        order: 33,
+        title: "DSA Assessment & Next Steps",
+        description: "Review core DSA ideas and build a practical path toward problem solving.",
+        estimatedMinutes: 10,
+        lesson: {
+          introduction:
+            "A strong foundation means you can explain structures, estimate complexity and select basic algorithms.",
+          points: [
+            { title: "Core structures", explanation: "Arrays, linked lists, stacks, queues, trees, heaps and graphs solve different organization problems." },
+            { title: "Core techniques", explanation: "Searching, sorting, recursion, greedy, backtracking and dynamic programming cover major algorithmic ideas." },
+            { title: "Practice", explanation: "Progress comes from solving problems, analyzing mistakes and revisiting weak concepts." },
+          ],
+          example: "A good next step is to implement each structure and solve progressively harder problems.",
+        },
+        practice: [
+          {
+            question: "What is the best way to strengthen a DSA foundation?",
+            options: ["Practice implementing concepts and solving problems", "Only memorize definitions", "Avoid analyzing complexity", "Skip difficult problems"],
+            correctAnswer: "Practice implementing concepts and solving problems",
+            explanation: "Implementation and deliberate problem practice turn conceptual knowledge into usable DSA skill.",
           },
         ],
       },
